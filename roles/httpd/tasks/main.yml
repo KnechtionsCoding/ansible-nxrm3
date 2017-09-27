@@ -10,8 +10,8 @@
 
 - name: Configure Reverse Proxy
   template:
-    src: sonar.conf.j2
-    dest: /etc/httpd/conf.d/sonar.{{your_domain}}.conf
+    src: nexus.conf.j2
+    dest: /etc/httpd/conf.d/nexus.{{your_domain}}.conf
     owner: root
     group: wheel
     mode: 0644
