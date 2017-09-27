@@ -1,0 +1,13 @@
+---
+- hosts: nexus
+  pre_tasks:
+    - name: Update all the packages
+      yum:
+        name: '*'
+        state: latest
+      become: true
+
+  roles:
+    - { role: java }
+    - { role: nexus }
+    - { role: httpd }
