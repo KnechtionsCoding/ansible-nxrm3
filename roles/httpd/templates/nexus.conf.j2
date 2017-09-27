@@ -1,0 +1,9 @@
+<VirtualHost *:80>  
+    ServerName nexus.{{your_domain}}
+    ServerAdmin me@{{your_domain}}
+    ProxyPreserveHost On
+    ProxyPass / http://localhost:8081/
+    ProxyPassReverse / http://localhost:8081/
+    TransferLog /var/log/httpd/nexus.{{your_domain}}_access.log
+    ErrorLog /var/log/httpd/nexus.{{your_domain}}_error.log
+</VirtualHost>
