@@ -1,6 +1,0 @@
-2017-09-27 10:50:00,150-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask - Task information:
-2017-09-27 10:50:00,153-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask -  ID: 16016d07-aa53-486d-8b2f-130d8cde549d
-2017-09-27 10:50:00,153-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask -  Type: repository.storage-facet-cleanup
-2017-09-27 10:50:00,153-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask -  Name: Storage facet cleanup
-2017-09-27 10:50:00,154-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask -  Description: Reclaim storage for deleted repositories
-2017-09-27 10:50:00,171-0400 INFO  [quartz-1-thread-1] *SYSTEM org.sonatype.nexus.repository.storage.internal.StorageFacetCleanupTask - Task complete
