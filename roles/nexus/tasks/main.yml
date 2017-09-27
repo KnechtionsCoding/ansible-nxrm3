@@ -39,8 +39,9 @@
   become: true
 
 - name: Start and Enable nexus Service
-  service:
+  systemd:
     name: nexus
     state: started
     enabled: yes
+    daemon_reload: yes
   become: true
