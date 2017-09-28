@@ -22,6 +22,7 @@
     dest: /etc/nexus/nexus-3.5.2-01/
     directory_mode: yes
     force: no
+    mode: 755
   become: true
 
 - name: Copy sonatype-work to correct location
@@ -30,12 +31,14 @@
     dest: /etc/nexus/sonatype-work/
     directory_mode: yes
     force: no
+    mode: 755
   become: true
 
 - name: copy service
   copy:
     src: nexus.service
-    dest: /etc/systemd/system/nexusservice
+    dest: /etc/systemd/system/nexus.service
+    mode: a+x
   become: true
 
 - name: Start and Enable nexus Service
