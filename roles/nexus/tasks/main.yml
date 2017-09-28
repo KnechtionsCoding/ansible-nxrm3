@@ -13,25 +13,12 @@
     mode: 777
   with_items:
     - /etc/nexus
-    - /etc/nexus/nexus-3.5.2-01
-    - /etc/nexus/sonatype-work
 
-- name: Copy Nexus-3.5.2-01 to correct location
-  copy:
-    src: nexus-3.5.2-01/
-    dest: /etc/nexus/nexus-3.5.2-01/
-    directory_mode: yes
-    force: no
-    mode: 755
-  become: true
-
-- name: Copy sonatype-work to correct location
-  copy:
-    src: sonatype-work/
-    dest: /etc/nexus/sonatype-work/
-    directory_mode: yes
-    force: no
-    mode: 755
+- name: download and unzip nexus files
+  unarchive:
+    src: http://download.sonatype.com/nexus/3/nexus-3.6.0-02-unix.tar.gz
+    dest: /etc/nexus
+    remote_src: yes
   become: true
 
 - name: copy service
