@@ -18,6 +18,8 @@
   unarchive:
     src: http://download.sonatype.com/nexus/3/nexus-3.6.0-02-unix.tar.gz
     dest: /etc/nexus
+    owner: nexus
+    mode: 755
     remote_src: yes
   become: true
 
