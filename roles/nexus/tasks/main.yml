@@ -10,7 +10,7 @@
     path: '{{ item }}'
     state: directory
     owner: nexus
-    mode: 777
+    mode: 0777
   with_items:
     - /etc/nexus
 
