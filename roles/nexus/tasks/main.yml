@@ -25,7 +25,6 @@
   copy:
     src: nexus.service
     dest: /etc/systemd/system/nexus.service
-    mode: a+x
   become: true
 
 - name: Start and Enable nexus Service
