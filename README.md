@@ -1,6 +1,13 @@
 # ansible-nxrm3
 Repository to Install Nexus Repository OSS 3
 
+## Prerequisites and Preparation
+**Supported OSes:** CentOS and RHEL
+**Supported OS Versions:** 6+
+
+**Note** This playbook runs a yum update prior to installation to ensure compatability.
+
+
 ## General Steps
 This playbook installs httpd as a reverse proxy to allow for port 80 to be used, and install Nexus OSS v3 on the correct machine.
 
