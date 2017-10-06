@@ -10,7 +10,7 @@
     path: '{{ item }}'
     state: directory
     owner: nexus
-    mode: 0777
+    group: nexus
   with_items:
     - /etc/nexus
 
@@ -19,7 +19,7 @@
     src: http://download.sonatype.com/nexus/3/nexus-3.6.0-02-unix.tar.gz
     dest: /etc/nexus
     owner: nexus
-    mode: 0777
+    group: nexus
     remote_src: yes
   become: true
 
@@ -27,6 +27,15 @@
   copy:
     src: nexus.service
     dest: /etc/systemd/system/nexus.service
+  become: true
+  
+- name: Ensures proper permissions
+  file:
+    path: /etc/nexus/
+    owner: nexus
+    group: nexus
+    mode: 0744
+    recurse: yes
   become: true
 
 - name: Start and Enable nexus Service
