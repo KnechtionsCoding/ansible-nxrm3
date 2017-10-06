@@ -7,13 +7,13 @@
         state: latest
       become: true
 
-- name: Install Dependencies
-  yum:
-    name: '{{ item }}'
-    state: latest
-  with_items:
+    - name: Install Dependencies
+      yum:
+        name: '{{ item }}'
+        state: latest
+      with_items:
         - libselinux-python #used for final SELinux Edit
-  become: true
+      become: true
 
   roles:
     - { role: java }
