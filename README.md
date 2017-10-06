@@ -9,7 +9,7 @@ Edit the hosts file, or add a [nexus] group to your config.
 Ensure that group_vars/all.yml has been edited to reflect your enviornment.
 
 ### Variables
-There is only a single variable to change for this playbook, your_domain. This is used in the logging, and httpd files.
+There is only a single variable to change for this playbook, **your_domain**. This is used in the logging, and httpd files.
 
 ### Command to install Nexus Repository OSS v3
 
