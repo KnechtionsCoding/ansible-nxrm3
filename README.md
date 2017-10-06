@@ -13,4 +13,4 @@ There is only a single variable to change for this playbook, your_domain. This i
 
 ### Command to install Nexus Repository OSS v3
 
-ansible-playbook -i hosts nexus.yml
+    ansible-playbook -i hosts nexus.yml
